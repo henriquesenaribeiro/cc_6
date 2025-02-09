@@ -93,3 +93,17 @@ tracker(200); // Expected output: "Total Expenses: $200"
 tracker(150); // Expected output: "Total Expenses: $350"
 
 // Developed an expense tracker, which is a function that returns another function to add expenses and keeps a running total. 
+
+// Task 8: Employee Promotion Evaluation
+
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel + 1);
+}
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // "Years to Level 10: 6"
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`); // "Years to Level 10: 10"
+
+// Created a function to calculate the years needed to reach promotion level 10, with a condition that if already at level 10, no years are required.
