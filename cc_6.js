@@ -38,3 +38,16 @@ calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good");      // Expected output: "Bonus: $700"
 
 // Based on the perfomance, bonus could be calculated
+
+// Task 4: Subscription Pricing Model
+
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let prices = { "Basic": 10, "Premium": 20, "Enterprise": 50 };
+    let totalCost = (prices[plan] * months) - discount;
+    console.log(`Total Cost: $${totalCost}`);
+}
+
+calculateSubscriptionCost("Basic", 6, 10); // Expected output: "Total Cost: $50"
+calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Total Cost: $240"
+
+// Built a function with three parameters to calculate recurring costs based on different package options.
